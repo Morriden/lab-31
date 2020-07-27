@@ -5,15 +5,12 @@ exports[`detailpage component should show a name status species and image 1`] = 
   <div>
     test name
   </div>
-  ,
   <div>
     test status
   </div>
-  ,
   <div>
     test species
   </div>
-  ,
   <img
     src="test image"
   />
