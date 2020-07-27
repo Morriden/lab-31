@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Detailpage = ({ name, status, species, image }) => (
-  <p>{name}</p>,
-  <p>{status}</p>,
-  <p>{species}</p>,
-  <img src={image} />
+  <section>
+    <div>{name}</div>,
+    <div>{status}</div>,
+    <div>{species}</div>,
+    <img src={image} />
+  </section>
 );
 
 Detailpage.propTypes = {
