@@ -1,28 +1,58 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react-hooks';
 import { useDetailPageHook } from './DetailsPageHook';
 
+jest.mock('../FetchCalls.js', () => ({
+  getRickAndMortyCharacter() {
+    return Promise.resolve({
+      results: {
+        name: 'Bobby',
+        status: 'Alive',
+        species: 'A hill',
+        image: 'a picture'
+      }
+    });
+  }
+}));
+
 describe('DetailPageHooks', () => {
-
-  let result;
-  beforeEach(() => {
-    const newResult = renderHook(() => useDetailPageHook());
-    result = newResult.result;
-  });
-
   it('has state for name', () => {
-    expect(result.current.name).not.toBeUndefined();
+    return act(() => {
+      const { result, waitFor } = renderHook(() => useDetailPageHook());
+
+      return waitFor(() => {
+        expect(result.current.name).not.toBeUndefined();
+      });
+    });
   });
 
   it('has state for status', () => {
-    expect(result.current.status).not.toBeUndefined();
+    return act(() => {
+      const { result, waitFor } = renderHook(() => useDetailPageHook());
+
+      return waitFor(() => {
+        expect(result.current.status).not.toBeUndefined();
+      });
+    });
   });
 
   it('has state for species', () => {
-    expect(result.current.species).not.toBeUndefined();
+    return act(() => {
+      const { result, waitFor } = renderHook(() => useDetailPageHook());
+
+      return waitFor(() => {
+        expect(result.current.species).not.toBeUndefined();
+      });
+    });
   });
 
   it('has state for image', () => {
-    expect(result.current.image).not.toBeUndefined();
+    return act(() => {
+      const { result, waitFor } = renderHook(() => useDetailPageHook());
+
+      return waitFor(() => {
+        expect(result.current.image).not.toBeUndefined();
+      });
+    });
   });
 });
 

@@ -4,12 +4,13 @@ import { useListPageHook } from '../../Services/Hooks/ListPageHook';
 
 const Data = () => {
 
-  const { lists, handleNextClick, handlePreviousClick } = useListPageHook();
+  const { lists, maxPages, currentPage, handleClick } = useListPageHook();
 
   return (
     <>
-      <button onClick={handlePreviousClick}>Previous Page</button>
-      <button onClick={handleNextClick}>Next Page</button>
+    {/* add bracket for current page on with cool stuff */}
+      {currentPage > 1 && <button name='previous' onClick={handleClick}>Previous Page</button>}
+      {currentPage < maxPages && <button name='next' onClick={handleClick}>Next Page</button>}
       <Listpage 
         lists={lists}
       />
