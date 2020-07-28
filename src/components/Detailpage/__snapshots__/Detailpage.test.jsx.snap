@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`detailpage component should show a name status species and image 1`] = `
+<section>
+  <div>
+    test name
+  </div>
+  <div>
+    test status
+  </div>
+  <div>
+    test species
+  </div>
+  <img
+    src="test image"
+  />
+</section>
+`;
