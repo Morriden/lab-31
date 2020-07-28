@@ -3,21 +3,17 @@ import Listpage from '../../components/Listpage/Listpage';
 import { useListPageHook } from '../../Services/Hooks/ListPageHook';
 
 const Data = () => {
-  // const [lists, setList] = useState([]);
-  
-  // useEffect(() => {
-  //   getRickAndMortyList()
-  //     .then(({ results }) => {
-  //       setList(results);
-  //     });
-  // }, []);
 
-  const { lists } = useListPageHook();
+  const { lists, handleNextClick, handlePreviousClick } = useListPageHook();
 
   return (
-    <Listpage 
-      lists={lists}
-    />
+    <>
+      <button onClick={handlePreviousClick}>Previous Page</button>
+      <button onClick={handleNextClick}>Next Page</button>
+      <Listpage 
+        lists={lists}
+      />
+    </>
   );
 };
 
