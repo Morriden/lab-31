@@ -1,23 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import { getRickAndMortyCharacter } from '../../Services/Services';
+import React from 'react';
 import Detailpage from '../../components/Detailpage/Detailpage';
-import { useParams } from 'react-router-dom';
+import { useDetailPageHook } from '../../Services/Hooks/DetailsPageHook';
+
+// const DetailsPageContainer = () => {
+//   const [name, setName] = useState([]);
+//   const [status, setStatus] = useState([]);
+//   const [species, setSpecies] = useState([]);
+//   const [image, setImage] = useState([]);
+//   const { id } = useParams();
+//   useEffect(() => {
+//     getRickAndMortyCharacter(id)
+//       .then(({ name, status, species, image }) => {
+//         setName(name);
+//         setStatus(status);
+//         setSpecies(species);
+//         setImage(image);
+//       });
+//   }, []);
 
 const DetailsPageContainer = () => {
-  const [name, setName] = useState([]);
-  const [status, setStatus] = useState([]);
-  const [species, setSpecies] = useState([]);
-  const [image, setImage] = useState([]);
-  const { id } = useParams();
-  useEffect(() => {
-    getRickAndMortyCharacter(id)
-      .then(({ name, status, species, image }) => {
-        setName(name);
-        setStatus(status);
-        setSpecies(species);
-        setImage(image);
-      });
-  }, []);
+
+  const {
+    name,
+    status,
+    species,
+    image
+  } = useDetailPageHook();
 
   return (
     <Detailpage 
