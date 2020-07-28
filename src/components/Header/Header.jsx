@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-      <Link to={'/home'}>
+      <Link to={'/'}>
         <h1>Back To Main Page</h1>
       </Link>
     </header>
