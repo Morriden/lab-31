@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component should show a list 1`] = `
+<ul>
+  <li
+    key="1"
+  >
+    <div />
+    <img />
+    <Link
+      to="/character/1"
+    >
+      <button>
+        More Details
+      </button>
+    </Link>
+  </li>
+  <li
+    key="2"
+  >
+    <div />
+    <img />
+    <Link
+      to="/character/2"
+    >
+      <button>
+        More Details
+      </button>
+    </Link>
+  </li>
+  <li
+    key="3"
+  >
+    <div />
+    <img />
+    <Link
+      to="/character/3"
+    >
+      <button>
+        More Details
+      </button>
+    </Link>
+  </li>
+</ul>
+`;
